@@ -1,0 +1,57 @@
+{
+  "name": "assembly-language",
+  "displayName": "Assembly Language",
+  "description": "Assembly Support for VS Code (NASM/Intel syntax)",
+  "version": "0.0.1",
+  "publisher": "Boring-Dude",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Boring-Dude/assembly"
+  },
+  "bugs": {
+    "url": "https://github.com/Boring-Dude/assembly/issues"
+  },
+  "homepage": "https://github.com/Boring-Dude/assembly",
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:asm"
+  ],
+  "keywords": [
+    "assembly",
+    "asm",
+    "nasm",
+    "x86",
+    "x86_64",
+    "intel"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "asm",
+        "aliases": ["Assembly", "asm"],
+        "extensions": [".asm", ".S", ".s"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "asm",
+        "path": "./snippets/asm.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "asm",
+        "scopeName": "source.asm",
+        "path": "./syntaxes/asm.tmLanguage.json"
+      }
+    ]
+  }
+}
